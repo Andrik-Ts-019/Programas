@@ -15,8 +15,6 @@ int main()
 	return 0;
 }
 
-
-/* Retroceso: 8 (Backspace) */
 void lectura(char *str)
 {
 	int i, j=0;
@@ -30,6 +28,7 @@ void lectura(char *str)
 		
 		*(str+i)=_getch();
 		
+		/* Retroceso: 8 (Backspace) */
 		if(*(str+i)==8 && i==0) i--;	/* Borrar sin tener carácteres */
 		if(*(str+i)==8 && i!=0) i-=2;	/* Permite borrar lo que se escribe */
 		
